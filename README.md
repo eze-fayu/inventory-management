@@ -24,3 +24,16 @@ Use the following command to create an admin user
 ```
 python manage.py createsuperuser
 ```
+
+
+heroku run python manage.py makemigrations &&\
+heroku run python manage.py migrate &&\
+heroku run python manage.py makemigrations homepage &&\
+heroku run python manage.py migrate homepage &&\
+heroku run python manage.py makemigrations inventory &&\
+heroku run python manage.py migrate inventory &&\
+heroku run python manage.py makemigrations transactions &&\
+heroku run python manage.py migrate transactions &&\
+heroku run python manage.py runserver &&\
+heroku run python manage.py createsuperuser
+
